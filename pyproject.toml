@@ -1,5 +1,19 @@
 [project]
 name = "iron-python-learning-lab"
 version = "0.1.0"
+description = "Runnable Python learning lab for Java engineers"
+readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[project.scripts]
+python-learning-lab = "iron_python_learning_lab.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
