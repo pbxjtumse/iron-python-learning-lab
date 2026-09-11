@@ -15,6 +15,8 @@
 
 ## 快速开始
 
+推荐用 uv：
+
 ```bash
 uv sync --group dev
 uv run python -m iron_python_learning_lab
@@ -22,10 +24,18 @@ uv run python -m iron_python_learning_lab 3
 uv run pytest
 ```
 
-如果你暂时不用 uv，也可以先用普通 Python 运行：
+如果你暂时不用 uv，可以先这样跑入口脚本：
 
 ```bash
-python -m iron_python_learning_lab
+python main.py
+python main.py 3
+```
+
+如果要直接用 `python -m` 方式运行，需要让 Python 找到 `src` 目录：
+
+```bash
+PYTHONPATH=src python -m iron_python_learning_lab
+PYTHONPATH=src python -m iron_python_learning_lab 3
 ```
 
 ## 目录结构
